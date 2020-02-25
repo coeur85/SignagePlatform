@@ -1,0 +1,36 @@
+﻿@using ScreenWebApp.Models
+@page "/"
+@inject ScreenWebApp.Interfaces.iPicture _db
+@using ScreenWebApp.Components
+
+
+
+
+<div class="row text-center" >
+    
+
+        @for (int i = 0; i < 6; i++)
+        {
+            <div class="col-md-4 p-0">
+                <SliderComponent Pictures="@_pics" ActiveSlide="@i" />             
+            </div>
+        }
+</div>
+    
+    @code{
+    private List<PictureModel> _pics = new List<PictureModel>(); 
+    
+        protected override async Task OnInitializedAsync()
+        {
+             await LoadPics();
+        }
+
+        protected async Task LoadPics(){
+            _pics = await _db.PictureArray();
+            
+        }
+
+        
+    }
+
+ß
