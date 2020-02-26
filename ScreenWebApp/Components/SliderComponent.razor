@@ -4,15 +4,17 @@
 
 
 
- <div class="carousel slide" data-ride="carousel" data-pause="false" >
+ <div class="carousel slide" data-ride="carousel" data-pause="false" id="slide_@ActiveSlide" >
     <div class="carousel-inner"> 
 
         @for (int i = 0; i < Pictures.Count; i++)
         {
             
             string active = ( i == ActiveSlide) ? "active":  "";
+            
                 <div class="carousel-item @active" >
-                        <img src="@Pictures[i].Base64" class="img-thumbnail bgomlaAddImg "  />
+                  
+                        <img src="@Pictures[i].Base64" class="img-thumbnail bgomlaAddImg"  />
                 </div>    
             
         }     
@@ -33,7 +35,7 @@
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
         {
-            await js.InvokeVoidAsync("initSlideShow", "ul_" +  ActiveSlide );
+            await js.InvokeVoidAsync("initSlideShow", ActiveSlide );
         }
     
 

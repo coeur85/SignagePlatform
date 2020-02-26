@@ -5,5 +5,6 @@
   <ItemGroup>
     <PackageReference Include="SimpleImpersonation" Version="3.0.0"/>
     <PackageReference Include="Microsoft.NETCore.Windows.ApiSets" Version="1.0.1"/>
+    <PackageReference Include="screenfull.js" Version="1.2.1"/>
   </ItemGroup>
 </Project>

@@ -26,6 +26,7 @@
         "dependencies": {
           "Microsoft.NETCore.Windows.ApiSets": "1.0.1",
           "SimpleImpersonation": "3.0.0",
+          "screenfull.js": "1.2.1",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.1.0.0",
@@ -318,6 +319,7 @@
       },
       "Microsoft.NETCore.Platforms/2.0.0": {},
       "Microsoft.NETCore.Windows.ApiSets/1.0.1": {},
+      "screenfull.js/1.2.1": {},
       "SimpleImpersonation/3.0.0": {
         "dependencies": {
           "System.Security.Principal.Windows": "4.5.0"
@@ -2050,6 +2052,13 @@
       "sha512": "sha512-SaToCvvsGMxTgtLv/BrFQ5IFMPRE1zpWbnqbpwykJa8W5XiX82CXI6K2o7yf5xS7EP6t/JzFLV0SIDuWpvBZVw==",
       "path": "microsoft.netcore.windows.apisets/1.0.1",
       "hashPath": "microsoft.netcore.windows.apisets.1.0.1.nupkg.sha512"
+    },
+    "screenfull.js/1.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UKkn5PkRHtZf2CwjmJk4Hnwj9MmioWE0+gmDWn2tfIagZgile6gtnGxOBkxDG7uIqQ8puEikKt7d3ppUrjNhYw==",
+      "path": "screenfull.js/1.2.1",
+      "hashPath": "screenfull.js.1.2.1.nupkg.sha512"
     },
     "SimpleImpersonation/3.0.0": {
       "type": "package",

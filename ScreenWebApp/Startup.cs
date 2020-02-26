@@ -31,9 +31,11 @@ namespace ScreenWebApp
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
 
-           // services.AddSingleton<IConfiguration>();
+           
            services.AddSingleton<iFileReader,FileReaderRepo>();
            services.AddSingleton<iPicture,PictureRepo>();
+           services.AddSingleton<iHelper,Helpers.HelperRepo>();
+           
             
 
             

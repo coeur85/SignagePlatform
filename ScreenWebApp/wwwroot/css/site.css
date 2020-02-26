@@ -1,8 +1,11 @@
 @import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
-html,
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    /* background-color: black; */
+    background-color: black;
 }
 
 a,
@@ -180,5 +183,14 @@ app {
     .bgomlaAddImg {
         width: 650px;
         height: 530px;
+    }
+    video {
+        /* width: 100%;
+        height: auto; */
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
     }
 }
