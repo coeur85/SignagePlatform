@@ -23,7 +23,6 @@ function initSlideShow(id) {
 
 
 
-function playVideo() {
 
     $('#picturesContaier').slideUp();
     $('#bGomlaVideo').trigger('play');
