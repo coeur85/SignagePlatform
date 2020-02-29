@@ -35,6 +35,9 @@ namespace ScreenWebApp.Reposetories
             if(vList.Any(x=> x.VideoID == (model.VideoID+1))) {
                 output.VideoModel = vList.FirstOrDefault(x=> x.VideoID == (model.VideoID +1));
             }
+            else{
+                output.VideoModel = vList.First();
+            }
             return output;
         }
 

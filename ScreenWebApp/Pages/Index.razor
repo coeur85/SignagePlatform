@@ -20,11 +20,8 @@
          @appInstance.ToString()
        </strong> 
 <div class="row text-center" id="videoContainer"  style="display: none;" >
-        <VideoComponent Video="@Video"  />
-            
+        <VideoComponent Video="@Video"  />          
 </div>
-
-
 
     
     @code{
@@ -51,9 +48,10 @@
         public async  Task CheckForPicturesUpdate(){   
             var model = await iPic.CheckForUpdate(_pics);
             if(model.ChangedState){
-               // await js.InvokeVoidAsync("disposeSlider");
+                await js.InvokeVoidAsync("disposeSlider");
                 _pics = model.Pictures;
-               // this.StateHasChanged();
+                this.StateHasChanged();
+                await intSlideshowFromJs();
             }
         }    
         
@@ -62,20 +60,23 @@
             var model = await iVid.NextVideo(Video);
             if(model.ChangedState){
                 Video = model.VideoModel;
-             //   this.StateHasChanged();
+                this.StateHasChanged();
             }
         }  
 
         protected override void OnAfterRender(bool firstRender)
         {
             if(firstRender){
-                Task.Run(()=> js.InvokeVoidAsync("initAppistance",appInstance));
-                Task.Run(()=> js.InvokeVoidAsync("initSlideShow"));
+                Task.Run(()=> intSlideshowFromJs());
+                
                 
             }
-            
         }
 
+        protected async Task intSlideshowFromJs(){
+            await  js.InvokeVoidAsync("initAppistance",appInstance);
+            await  js.InvokeVoidAsync("initSlideShow");
+        }
 
     }
 
