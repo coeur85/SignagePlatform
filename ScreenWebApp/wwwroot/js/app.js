@@ -1,42 +1,90 @@
-function initSlideShow(id) {
-    $('#slide_' + id).carousel({
-            interval: slideTime
-        })
-        .on('slid.bs.carousel', function() {
-            curSlide = $('.active');
-            if (id == 0) {
-                var totalItems = $('#slide_' + id + ' .carousel-inner').children().length;
-                var currentIndex = $('#slide_' + id + ' .active').index();
-                console.log('t:' + totalItems + ',c:' + currentIndex);
-                if (currentIndex == 0) {
-                    console.log('slide show is over');
-                    $('.carousel').carousel('pause');
-                    playVideo();
-                }
+var pictureCycleCount = 0;
+var sliderOnlyOnce = true;
+var appInstance;
+
+function initAppistance(appi) {
+    appInstance = appi;
+}
+
+
+
+function addSliderEventMonitor() {
+    $('#slide_0').on('slid.bs.carousel', function() {
+
+
+        var totalItems = $('#slide_0 .carousel-inner').children().length;
+        var currentIndex = $('#slide_0 .active').index();
+
+        if (currentIndex == 0 && (pictureCycleCount == CycleTimesBeforeVideo)) {
+            console.log('slide show is over');
+            $('.carousel').carousel('pause');
+            checkForUpdate(appInstance);
+            playVideo();
+            pictureCycleCount = 0;
+        }
+        if (currentIndex == (totalItems - 1)) {
+            pictureCycleCount += 1;
+            if (pictureCycleCount > CycleTimesBeforeVideo) {
+                pictureCycleCount = CycleTimesBeforeVideo;
             }
+        }
+        console.log('t:' + totalItems + ',c:' + currentIndex + ",oc:" +
+            CycleTimesBeforeVideo + ",cc:" + pictureCycleCount);
 
-            return;
+
+        return;
+    });
+}
+
+
+
+function initSlideShow() {
+    $('.carousel').carousel({
+        interval: slideTime
+    })
+    console.log('init slide show');
+    addSliderEventMonitor();
+}
+
+
+
+function checkForUpdate(instance) {
+    appInstance = instance;
+    instance.invokeMethodAsync('CheckForPicturesUpdate')
+        .then(() => {
+            console.log('the picture method was called from js');
         });
-
 }
 
 
-
-
-
-    $('#picturesContaier').slideUp();
-    $('#bGomlaVideo').trigger('play');
+function playVideo() {
+    document.getElementById('bGomlaVideo').load();
     $('#videoContainer').show();
-
-
+    $('#picturesContaier').slideUp('slow');
+    $('#bGomlaVideo').trigger('play');
 }
 
 
-function playPics() {
+function playPics(id) {
+    $('#videoContainer').hide();
     $('#picturesContaier').slideDown();
     $('.carousel').carousel('cycle');
-    $('#videoContainer').hide();
     $('#bGomlaVideo').trigger('pause');
     $('#bGomlaVideo').currentTime = 0;
-
+    appInstance.invokeMethodAsync('CheckForVediosUpdate')
+        .then(() => {
+            console.log('the vedio method was called from js');
+        });
 }
+
+function reLoadVideo(id) {
+    document.getElementById(id).load();
+    console.log('video has been reloaded');
+}
+
+function disposeSlider() {
+    $('.carousel').carousel('dispose');
+}
+
+
+//document.body.style.cursor = 'none';

@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+
 namespace ScreenWebApp.Models
 {
     public class PictureModel
@@ -5,5 +8,12 @@ namespace ScreenWebApp.Models
         public int PictureID { get; set; }
         public string PictureName { get; set; }
         public string Base64 { get; set; }
+        public DateTime LastWriteTime { get; set; }
+    }
+
+
+    public class PicturePgaeModel {
+        public List<PictureModel> Pictures { get; set; } = new List<PictureModel>();
+        public bool ChangedState { get; set; }
     }
 }

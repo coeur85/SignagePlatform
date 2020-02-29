@@ -1,10 +1,37 @@
+@using ScreenWebApp.Models;
+@page "/VideoComponent";
+@inject ScreenWebApp.Interfaces.iVideo iVid;
 
+@if(Video != null && appInstance !=null){
 
+        <video  muted controls id="bGomlaVideo" onended="playPics(@Video.VideoID)"  >
+            <source src="@Video.VideoFilePath" type="video/mp4" id="vsrc">       
+       </video>  
+       <strong>
+         @appInstance.ToString()
+       </strong> 
+}
 
-        <video  muted  id="bGomlaVideo"  onended="playPics()" >
-            <source src="mp4/mov_bbb.mp4" type="video/mp4">       
-        </video>   
+      
         
+  @code{
+    [Parameter]
+    public VideoModel Video {get;set;}
 
-  
-  
+    
+    private object appInstance {get;set;}
+    
+    
+
+    protected override  void OnInitialized()
+        {
+             appInstance = DotNetObjectReference.Create(this);
+            
+        }
+        
+        
+       
+    
+  }
+
+ 

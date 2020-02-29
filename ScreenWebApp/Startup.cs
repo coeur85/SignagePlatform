@@ -35,6 +35,7 @@ namespace ScreenWebApp
            services.AddSingleton<iFileReader,FileReaderRepo>();
            services.AddSingleton<iPicture,PictureRepo>();
            services.AddSingleton<iHelper,Helpers.HelperRepo>();
+           services.AddSingleton<iVideo,VideoRepo>();
            
             
 

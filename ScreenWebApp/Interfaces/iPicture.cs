@@ -5,6 +5,7 @@ namespace ScreenWebApp.Interfaces
 {
     public interface iPicture
     {
-         public Task<List<PictureModel>> PictureArray();
+        public Task<List<PictureModel>> PictureArray();
+        public Task<PicturePgaeModel> CheckForUpdate(List<PictureModel> model);
     }
 }

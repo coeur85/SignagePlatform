@@ -1,5 +1,5 @@
 @using ScreenWebApp.Models
-@inject IJSRuntime js
+
 @page "/SliderComponent"
 
 
@@ -31,12 +31,24 @@
     public List<PictureModel> Pictures {get;set;}  
     [Parameter]
     public int ActiveSlide {get;set;}
+    [Parameter]
+    public object AppInstance {get;set;}
 
 
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-        {
-            await js.InvokeVoidAsync("initSlideShow", ActiveSlide );
-        }
+   // protected override async Task OnAfterRenderAsync(bool firstRender)
+      //  {
+         //   if(firstRender){
+         //       if(ActiveSlide == 0){
+        //        await js.InvokeVoidAsync("initSlideShowZero", ActiveSlide, AppInstance );
+        //        }
+        //        else{
+         //           await js.InvokeVoidAsync("initSlideShow", ActiveSlide);
+         //       }
+      //      }
+       //     
+            
+     //   }
+    
     
 
  }

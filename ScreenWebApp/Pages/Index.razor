@@ -1,43 +1,82 @@
-﻿@using ScreenWebApp.Models
-@page "/"
-@inject ScreenWebApp.Interfaces.iPicture _db
-@using ScreenWebApp.Components
-
+﻿@using ScreenWebApp.Models;
+@page "/";
+@inject ScreenWebApp.Interfaces.iPicture iPic;
+@using ScreenWebApp.Components;
+@inject ScreenWebApp.Interfaces.iVideo iVid;
+@inject IJSRuntime js;
 
 
 
 <div class="row text-center" id="picturesContaier" >
-        @for (int i = 0; i < 6; i++)
+        @for (int i = 0; i < 2; i++)
         {
             <div class="col-md-4 p-0">
-                <SliderComponent Pictures="@_pics" ActiveSlide="@i" />             
+                <SliderComponent Pictures="@_pics" ActiveSlide="@i" AppInstance="@appInstance" />             
             </div>
         }
 </div>
 
-<div class="row text-center" id="videoContainer" style="display:none;" >
-        <VideoComponent>
-
-        </VideoComponent>
+ <strong>
+         @appInstance.ToString()
+       </strong> 
+<div class="row text-center" id="videoContainer"  style="display: none;" >
+        <VideoComponent Video="@Video"  />
+            
 </div>
 
 
 
     
     @code{
-    private List<PictureModel> _pics = new List<PictureModel>(); 
+    private  List<PictureModel> _pics = new List<PictureModel>(); 
+    private VideoModel Video {get;set;} = new VideoModel();
+    private object appInstance ;
     
         protected override async Task OnInitializedAsync()
         {
-             await LoadPics();
-        }
-
-        protected async Task LoadPics(){
-            _pics = await _db.PictureArray();
+             appInstance = DotNetObjectReference.Create(this);
+            
+             await LoadData();
             
         }
 
+        protected async Task LoadData(){
+            _pics = await iPic.PictureArray();    
+            Video = await iVid.FirstVideo();
+           
+            
+        }
+
+        [JSInvokable]
+        public async  Task CheckForPicturesUpdate(){   
+            var model = await iPic.CheckForUpdate(_pics);
+            if(model.ChangedState){
+               // await js.InvokeVoidAsync("disposeSlider");
+                _pics = model.Pictures;
+               // this.StateHasChanged();
+            }
+        }    
         
+         [JSInvokable]
+        public async  Task CheckForVediosUpdate(){   
+            var model = await iVid.NextVideo(Video);
+            if(model.ChangedState){
+                Video = model.VideoModel;
+             //   this.StateHasChanged();
+            }
+        }  
+
+        protected override void OnAfterRender(bool firstRender)
+        {
+            if(firstRender){
+                Task.Run(()=> js.InvokeVoidAsync("initAppistance",appInstance));
+                Task.Run(()=> js.InvokeVoidAsync("initSlideShow"));
+                
+            }
+            
+        }
+
+
     }
 
 

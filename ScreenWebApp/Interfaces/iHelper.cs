@@ -6,5 +6,9 @@ namespace ScreenWebApp.Interfaces
          public string MyBranchPictureRoot {get ;}
          public decimal SlideintervalInSeconds { get; }
 
+         public int CycleTimesBeforeVideo{get;}
+
+         public string MyBranchVideoRoot{get;}
+
     }
 }
