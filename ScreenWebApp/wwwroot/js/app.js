@@ -58,10 +58,21 @@ function checkForUpdate(instance) {
 
 
 function playVideo() {
-    document.getElementById('bGomlaVideo').load();
-    $('#videoContainer').show();
-    $('#picturesContaier').slideUp('slow');
-    $('#bGomlaVideo').trigger('play');
+    if (document.getElementById('bGomlaVideo')) {
+        document.getElementById('bGomlaVideo').load();
+        $('#videoContainer').show();
+        $('#picturesContaier').slideUp('slow');
+        $('#bGomlaVideo').trigger('play');
+    } else {
+        disposeSlider();
+        initSlideShow();
+        appInstance.invokeMethodAsync('CheckForVediosUpdate')
+            .then(() => {
+                console.log('the vedio method was called from js');
+            });
+    }
+
+
 }
 
 

@@ -481,20 +481,6 @@
               "Common.PropertyName": "ActiveSlide"
             },
             "BoundAttributeParameters": []
-          },
-          {
-            "Kind": "Components.Component",
-            "Name": "AppInstance",
-            "TypeName": "System.Object",
-            "IsEnum": false,
-            "IndexerNamePrefix": null,
-            "IndexerTypeName": null,
-            "Documentation": null,
-            "Diagnostics": [],
-            "Metadata": {
-              "Common.PropertyName": "AppInstance"
-            },
-            "BoundAttributeParameters": []
           }
         ],
         "AllowedChildTags": [],
@@ -546,20 +532,6 @@
             "Diagnostics": [],
             "Metadata": {
               "Common.PropertyName": "ActiveSlide"
-            },
-            "BoundAttributeParameters": []
-          },
-          {
-            "Kind": "Components.Component",
-            "Name": "AppInstance",
-            "TypeName": "System.Object",
-            "IsEnum": false,
-            "IndexerNamePrefix": null,
-            "IndexerTypeName": null,
-            "Documentation": null,
-            "Diagnostics": [],
-            "Metadata": {
-              "Common.PropertyName": "AppInstance"
             },
             "BoundAttributeParameters": []
           }

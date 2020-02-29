@@ -11,7 +11,7 @@
         @for (int i = 0; i < 2; i++)
         {
             <div class="col-md-4 p-0">
-                <SliderComponent Pictures="@_pics" ActiveSlide="@i" AppInstance="@appInstance" />             
+                <SliderComponent Pictures="@_pics" ActiveSlide="@i" />             
             </div>
         }
 </div>
@@ -19,9 +19,12 @@
  <strong>
          @appInstance.ToString()
        </strong> 
-<div class="row text-center" id="videoContainer"  style="display: none;" >
-        <VideoComponent Video="@Video"  />          
-</div>
+       @if(Video != null){
+        <div class="row text-center" id="videoContainer"  style="display: none;" >
+                <VideoComponent Video="@Video"  />          
+        </div>
+       }
+
 
     
     @code{
@@ -39,9 +42,7 @@
 
         protected async Task LoadData(){
             _pics = await iPic.PictureArray();    
-            Video = await iVid.FirstVideo();
-           
-            
+            Video = await iVid.FirstVideo();      
         }
 
         [JSInvokable]
@@ -67,9 +68,7 @@
         protected override void OnAfterRender(bool firstRender)
         {
             if(firstRender){
-                Task.Run(()=> intSlideshowFromJs());
-                
-                
+                Task.Run(()=> intSlideshowFromJs());                
             }
         }
 

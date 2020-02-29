@@ -18,6 +18,27 @@ namespace ScreenWebApp.Reposetories
         public async Task<VideoPageModel> NextVideo(VideoModel model)
         {
              var vList = await _reader.GetMyVideos();
+            if(model == null){
+                if(vList.Count > 0){
+                    return new VideoPageModel{
+                        ChangedState =true,
+                        VideoModel = vList.First()
+                    };
+                }
+            
+                else{
+                        return new VideoPageModel{
+                        ChangedState = false
+                        };
+                }
+            }
+            if(vList.Count == 0){
+                return new VideoPageModel{
+                    VideoModel = null,
+                    ChangedState = true
+                };
+            }
+            
             if(vList.Count ==1){
                 if(vList.FirstOrDefault().VideoFilePath == model.VideoFilePath &&
                  vList.FirstOrDefault().Lenth ==model.Lenth){

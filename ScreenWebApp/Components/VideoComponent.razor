@@ -4,7 +4,7 @@
 
 @if(Video != null && appInstance !=null){
 
-        <video  muted controls id="bGomlaVideo" onended="playPics(@Video.VideoID)"  >
+        <video  muted controls id="bGomlaVideo" onended="playPics(@Video.VideoID)" onerror="playPics(@Video.VideoID)"  >
             <source src="@Video.VideoFilePath" type="video/mp4" id="vsrc">       
        </video>  
        <strong>
