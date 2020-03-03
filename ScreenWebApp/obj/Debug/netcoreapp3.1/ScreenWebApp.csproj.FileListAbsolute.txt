@@ -50,3 +50,5 @@
 /Users/magdi/Documents/repo/SignagePlatformApp/ScreenWebApp/obj/Debug/netcoreapp3.1/Razor/Components/SliderComponent.razor.g.cs
 /Users/magdi/Documents/repo/SignagePlatformApp/ScreenWebApp/obj/Debug/netcoreapp3.1/RazorDeclaration/Components/VideoComponent.razor.g.cs
 /Users/magdi/Documents/repo/SignagePlatformApp/ScreenWebApp/obj/Debug/netcoreapp3.1/Razor/Components/VideoComponent.razor.g.cs
+/Users/magdi/Documents/repo/SignagePlatformApp/ScreenWebApp/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/SlideIndex.razor.g.cs
+/Users/magdi/Documents/repo/SignagePlatformApp/ScreenWebApp/obj/Debug/netcoreapp3.1/Razor/Pages/SlideIndex.razor.g.cs

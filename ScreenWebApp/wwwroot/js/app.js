@@ -60,9 +60,15 @@ function checkForUpdate(instance) {
 function playVideo() {
     if (document.getElementById('bGomlaVideo')) {
         document.getElementById('bGomlaVideo').load();
+        // $('#bGomlaVideo').removeClass('video');
+        // $('#bGomlaVideo').addClass('video');
         $('#videoContainer').show();
         $('#picturesContaier').slideUp('slow');
         $('#bGomlaVideo').trigger('play');
+        document.getElementById('bGomlaVideo').muted = "muted";
+        document.getElementById('bGomlaVideo').controls = false;
+
+
     } else {
         disposeSlider();
         initSlideShow();

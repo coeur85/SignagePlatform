@@ -184,13 +184,27 @@ app {
         width: 650px;
         height: 530px;
     }
-    video {
+    /* .video {
         /* width: 100%;
         height: auto; */
+    /*
         position: fixed;
         right: 0;
         bottom: 0;
         min-width: 100%;
         min-height: 100%;
+    } */
+    .videoContainer {
+        /* position: absolute; */
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+    /* .videoContainer video {
+        min-width: 100%;
+        min-height: 100%;
+    } */
+    .video {
+        object-fit: cover;
     }
 }

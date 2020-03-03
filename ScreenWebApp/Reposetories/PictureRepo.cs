@@ -16,16 +16,16 @@ namespace ScreenWebApp.Reposetories
         }
 
 
-        public async Task<List<PictureModel>> PictureArray()
+        public async Task<List<PictureModel>> PictureArray(int setNumber)
         {
            
-            var output = await _reader.GetMyPictures();
+            var output = await _reader.GetMyPictures(setNumber);
             return output;
         }
 
 
-        public async Task<PicturePgaeModel> CheckForUpdate(List<PictureModel> model){
-            var newArray = await _reader.GetMyPictures();
+        public async Task<PicturePgaeModel> CheckForUpdate(int setNumber,List<PictureModel> model){
+            var newArray = await _reader.GetMyPictures(setNumber);
             PicturePgaeModel output = new PicturePgaeModel();
             output.ChangedState = false;
             

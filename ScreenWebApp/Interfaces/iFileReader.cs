@@ -6,8 +6,8 @@ namespace ScreenWebApp.Interfaces
 {
     public interface iFileReader 
     {
-         public Task<List<PictureModel>> GetMyPictures();
-          public Task<List<VideoModel>> GetMyVideos();
+         public Task<List<PictureModel>> GetMyPictures(int setNumber);
+          public Task<List<VideoModel>> GetMyVideos(int setNumber);
          
     }
 }

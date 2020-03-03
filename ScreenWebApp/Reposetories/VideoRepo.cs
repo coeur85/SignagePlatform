@@ -15,9 +15,9 @@ namespace ScreenWebApp.Reposetories
             _reader = reader;
         }
 
-        public async Task<VideoPageModel> NextVideo(VideoModel model)
+        public async Task<VideoPageModel> NextVideo(int setNumber,VideoModel model)
         {
-             var vList = await _reader.GetMyVideos();
+             var vList = await _reader.GetMyVideos(setNumber);
             if(model == null){
                 if(vList.Count > 0){
                     return new VideoPageModel{
@@ -62,9 +62,9 @@ namespace ScreenWebApp.Reposetories
             return output;
         }
 
-        public async Task<VideoModel> FirstVideo()
+        public async Task<VideoModel> FirstVideo(int setNumber)
         {
-            var output =await _reader.GetMyVideos();
+            var output =await _reader.GetMyVideos(setNumber);
             return output.FirstOrDefault();
         }
     }

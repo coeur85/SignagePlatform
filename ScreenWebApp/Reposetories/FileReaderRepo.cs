@@ -16,18 +16,20 @@ namespace ScreenWebApp.Reposetories
 
 
         private readonly iHelper _helper;
-
-        public FileReaderRepo(iHelper helper)
-        {
+       
+        public FileReaderRepo(iHelper helper){
             _helper = helper;
         }
+        
 
-        private FileInfo[] FilesInRoot(string root, string ext){
+
+        private List<FileInfo> FilesInRoot(string root, string ext){
                 DirectoryInfo d = new DirectoryInfo(root);
+               // if(!d.Exists) return new FileInfo[0];
                 FileInfo[] files = d.GetFiles("*." + ext);
-            return files;
+            return files.ToList();
         }
-        public Task<List<PictureModel>> GetMyPictures()
+        public Task<List<PictureModel>> GetMyPictures(int setNumber)
         {
             string extCongigValue = _helper.PicturesFileExtiontion;
             string[] extAry;
@@ -43,7 +45,14 @@ namespace ScreenWebApp.Reposetories
             List<PictureModel> picList = new List<PictureModel>();
             foreach (var ext in extAry)
             {
-                var picFiles = FilesInRoot(_helper.MyBranchPictureRoot,ext);
+                var picFiles = FilesInRoot( _helper.AllBranchesRoot,ext);
+                picFiles.AddRange(
+                    FilesInRoot( 
+                        setNumber == 1 ? 
+                        _helper.MyBranchSetOneRoot :
+                        _helper.MyBranchSetTwoRoot,
+                    ext));
+
                 foreach (var pic in picFiles)
                 {
                     var byteArray = File.ReadAllBytes(pic.FullName);
@@ -64,9 +73,17 @@ namespace ScreenWebApp.Reposetories
 
         }
 
-        public Task<List<VideoModel>> GetMyVideos()
+        public Task<List<VideoModel>> GetMyVideos(int setNumber)
         {
-            var videoFiles = FilesInRoot(_helper.MyBranchVideoRoot, "mp4");
+            string mp4Ext = "mp4";
+            var videoFiles = FilesInRoot(_helper.AllBranchesRoot, mp4Ext);
+            videoFiles.AddRange(FilesInRoot(
+                    setNumber == 1 ? 
+                    _helper.MyBranchSetOneRoot :
+                    _helper.MyBranchSetTwoRoot ,
+                mp4Ext));
+            
+
             string mp4Root ="wwwroot/mp4/";
             int i =0;
 

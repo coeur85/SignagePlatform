@@ -4,15 +4,12 @@
 
 @if(Video != null && appInstance !=null){
 
-        <video  muted controls id="bGomlaVideo" onended="playPics(@Video.VideoID)" onerror="playPics(@Video.VideoID)"  >
+        <video  id="bGomlaVideo"  class="video"
+        onended="playPics(@Video.VideoID)" onerror="playPics(@Video.VideoID)"  >
             <source src="@Video.VideoFilePath" type="video/mp4" id="vsrc">       
        </video>  
-       <strong>
-         @appInstance.ToString()
-       </strong> 
-}
 
-      
+}
         
   @code{
     [Parameter]
@@ -23,10 +20,8 @@
     
     
 
-    protected override  void OnInitialized()
-        {
-             appInstance = DotNetObjectReference.Create(this);
-            
+    protected override  void OnInitialized(){
+             appInstance = DotNetObjectReference.Create(this);      
         }
         
         

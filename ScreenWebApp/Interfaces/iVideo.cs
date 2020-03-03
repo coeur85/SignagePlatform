@@ -6,7 +6,7 @@ namespace ScreenWebApp.Interfaces
 {
     public interface iVideo
     {
-          public  Task<VideoModel> FirstVideo();
-          public Task<VideoPageModel> NextVideo(VideoModel model);
+          public  Task<VideoModel> FirstVideo(int setNumber);
+          public Task<VideoPageModel> NextVideo(int setNumber, VideoModel model);
     }
 }
