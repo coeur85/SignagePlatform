@@ -1,6 +1,6 @@
-#Screens signage platform 
+# Screens signage platform 
 
-i made this app to display a slide show of pictures and videos on the multiple  screens on our retail stores .
+I made this app to display a slide show of pictures and videos on the multiple  screens on our retail stores .
 
 each of our brands has like 6 screens that needs to display the latest offers of our products , and  a number of videos.
 
