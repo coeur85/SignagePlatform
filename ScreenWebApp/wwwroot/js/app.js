@@ -10,11 +10,8 @@ function initAppistance(appi) {
 
 function addSliderEventMonitor() {
     $('#slide_0').on('slid.bs.carousel', function() {
-
-
         var totalItems = $('#slide_0 .carousel-inner').children().length;
         var currentIndex = $('#slide_0 .active').index();
-
         if (currentIndex == 0 && (pictureCycleCount == CycleTimesBeforeVideo)) {
             console.log('slide show is over');
             $('.carousel').carousel('pause');
@@ -104,4 +101,12 @@ function disposeSlider() {
 }
 
 
-//document.body.style.cursor = 'none';
+document.body.style.cursor = 'none';
+
+$(document).ready(function () {
+//    jQuery.fn.carousel.Constructor.TRANSITION_DURATION = 2000  // 2 seconds
+
+    setTimeout(function () {
+        window.location.reload(1);
+    }, 900000); // 15 min
+});

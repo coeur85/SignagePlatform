@@ -8,7 +8,7 @@ namespace ScreenWebApp.Models
         public int PictureID { get; set; }
         public string PictureName { get; set; }
         public string Base64 { get; set; }
-        public DateTime LastWriteTime { get; set; }
+        public DateTimeOffset LastWriteTime { get; set; }
     }
 
 

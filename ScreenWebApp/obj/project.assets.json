@@ -55,7 +55,7 @@
   },
   "libraries": {
     "Microsoft.NETCore.Platforms/2.0.0": {
-      "sha512": "5BdAWDgMNwf90L0J+C/eh6kfHDa37ViL1cBL1nv5zPA4TB2cGV51YiQyvzCEy9DBE0LwwMI4+PkUpIekKyocSA==",
+      "sha512": "VdLJOCXhZaEMY7Hm2GKiULmn7IEPFE4XC5LPSfBVCUIA8YLZVh846gtfBJalsPQF2PlzdD7ecX7DZEulJ402ZQ==",
       "type": "package",
       "path": "microsoft.netcore.platforms/2.0.0",
       "files": [
@@ -122,7 +122,7 @@
       ]
     },
     "System.Security.Principal.Windows/4.5.0": {
-      "sha512": "WA9ETb/pY3BjnxKjBUHEgO59B7d/nnmjHFsqjJ2eDT780nD769CT1/bw2ia0Z6W7NqlcqokE6sKGKa6uw88XGA==",
+      "sha512": "U77HfRXlZlOeIXd//Yoj6Jnk8AXlbeisf1oq1os+hxOGVnuG+lGSfGqTwTZBoORFF6j/0q7HXIl8cqwQ9aUGqQ==",
       "type": "package",
       "path": "system.security.principal.windows/4.5.0",
       "files": [
@@ -173,28 +173,30 @@
     ]
   },
   "packageFolders": {
-    "/Users/magdi/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\ahmed.magdi\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/magdi/Documents/repo/SignagePlatformApp/ScreenWebApp/ScreenWebApp.csproj",
+      "projectUniqueName": "C:\\Users\\ahmed.magdi\\source\\repos\\SignagePlatform\\ScreenWebApp\\ScreenWebApp.csproj",
       "projectName": "ScreenWebApp",
-      "projectPath": "/Users/magdi/Documents/repo/SignagePlatformApp/ScreenWebApp/ScreenWebApp.csproj",
-      "packagesPath": "/Users/magdi/.nuget/packages/",
-      "outputPath": "/Users/magdi/Documents/repo/SignagePlatformApp/ScreenWebApp/obj/",
+      "projectPath": "C:\\Users\\ahmed.magdi\\source\\repos\\SignagePlatform\\ScreenWebApp\\ScreenWebApp.csproj",
+      "packagesPath": "C:\\Users\\ahmed.magdi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ahmed.magdi\\source\\repos\\SignagePlatform\\ScreenWebApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/magdi/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\ahmed.magdi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -242,7 +244,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.101/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200-preview-015002\\RuntimeIdentifierGraph.json"
       }
     }
   }
