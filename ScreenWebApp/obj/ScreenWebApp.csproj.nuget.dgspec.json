@@ -1,30 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ahmed.magdi\\source\\repos\\SignagePlatform\\ScreenWebApp\\ScreenWebApp.csproj": {}
+    "/Users/magdi/Documents/repo/SignagePlatformApp/ScreenWebApp/ScreenWebApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ahmed.magdi\\source\\repos\\SignagePlatform\\ScreenWebApp\\ScreenWebApp.csproj": {
+    "/Users/magdi/Documents/repo/SignagePlatformApp/ScreenWebApp/ScreenWebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ahmed.magdi\\source\\repos\\SignagePlatform\\ScreenWebApp\\ScreenWebApp.csproj",
+        "projectUniqueName": "/Users/magdi/Documents/repo/SignagePlatformApp/ScreenWebApp/ScreenWebApp.csproj",
         "projectName": "ScreenWebApp",
-        "projectPath": "C:\\Users\\ahmed.magdi\\source\\repos\\SignagePlatform\\ScreenWebApp\\ScreenWebApp.csproj",
-        "packagesPath": "C:\\Users\\ahmed.magdi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ahmed.magdi\\source\\repos\\SignagePlatform\\ScreenWebApp\\obj\\",
+        "projectPath": "/Users/magdi/Documents/repo/SignagePlatformApp/ScreenWebApp/ScreenWebApp.csproj",
+        "packagesPath": "/Users/magdi/.nuget/packages/",
+        "outputPath": "/Users/magdi/Documents/repo/SignagePlatformApp/ScreenWebApp/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\ahmed.magdi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/magdi/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -72,7 +70,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200-preview-015002\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.101/RuntimeIdentifierGraph.json"
         }
       }
     }

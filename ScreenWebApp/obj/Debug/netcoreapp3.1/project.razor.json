@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\ahmed.magdi\\source\\repos\\SignagePlatform\\ScreenWebApp\\ScreenWebApp.csproj",
+  "FilePath": "/Users/magdi/Documents/repo/SignagePlatformApp/ScreenWebApp/ScreenWebApp.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -11,6 +11,104 @@
   },
   "ProjectWorkspaceState": {
     "TagHelpers": [
+      {
+        "Kind": "Components.Component",
+        "Name": "ScreenWebApp.App",
+        "AssemblyName": "ScreenWebApp",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "App",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ScreenWebApp.App"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "ScreenWebApp.App",
+        "AssemblyName": "ScreenWebApp",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ScreenWebApp.App",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ScreenWebApp.App",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "ScreenWebApp.Pages.Error",
+        "AssemblyName": "ScreenWebApp",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Error",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ScreenWebApp.Pages.Error"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "ScreenWebApp.Pages.Error",
+        "AssemblyName": "ScreenWebApp",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ScreenWebApp.Pages.Error",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ScreenWebApp.Pages.Error",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
       {
         "Kind": "Components.Component",
         "Name": "ScreenWebApp.Pages.Index",
@@ -136,104 +234,6 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "ScreenWebApp.Pages.SlideIndex",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "ScreenWebApp.Pages.Error",
-        "AssemblyName": "ScreenWebApp",
-        "Documentation": null,
-        "TagOutputHint": null,
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Error",
-            "ParentTag": null,
-            "TagStructure": 0,
-            "Attributes": [],
-            "Diagnostics": []
-          }
-        ],
-        "BoundAttributes": [],
-        "AllowedChildTags": [],
-        "Diagnostics": [],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ScreenWebApp.Pages.Error"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "ScreenWebApp.Pages.Error",
-        "AssemblyName": "ScreenWebApp",
-        "Documentation": null,
-        "TagOutputHint": null,
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ScreenWebApp.Pages.Error",
-            "ParentTag": null,
-            "TagStructure": 0,
-            "Attributes": [],
-            "Diagnostics": []
-          }
-        ],
-        "BoundAttributes": [],
-        "AllowedChildTags": [],
-        "Diagnostics": [],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ScreenWebApp.Pages.Error",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "ScreenWebApp.Shared.NavMenu",
-        "AssemblyName": "ScreenWebApp",
-        "Documentation": null,
-        "TagOutputHint": null,
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "NavMenu",
-            "ParentTag": null,
-            "TagStructure": 0,
-            "Attributes": [],
-            "Diagnostics": []
-          }
-        ],
-        "BoundAttributes": [],
-        "AllowedChildTags": [],
-        "Diagnostics": [],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ScreenWebApp.Shared.NavMenu"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "ScreenWebApp.Shared.NavMenu",
-        "AssemblyName": "ScreenWebApp",
-        "Documentation": null,
-        "TagOutputHint": null,
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ScreenWebApp.Shared.NavMenu",
-            "ParentTag": null,
-            "TagStructure": 0,
-            "Attributes": [],
-            "Diagnostics": []
-          }
-        ],
-        "BoundAttributes": [],
-        "AllowedChildTags": [],
-        "Diagnostics": [],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ScreenWebApp.Shared.NavMenu",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -371,6 +371,134 @@
       },
       {
         "Kind": "Components.Component",
+        "Name": "ScreenWebApp.Shared.NavMenu",
+        "AssemblyName": "ScreenWebApp",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "NavMenu",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ScreenWebApp.Shared.NavMenu"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "ScreenWebApp.Shared.NavMenu",
+        "AssemblyName": "ScreenWebApp",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ScreenWebApp.Shared.NavMenu",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ScreenWebApp.Shared.NavMenu",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "ScreenWebApp.Components.VideoComponent",
+        "AssemblyName": "ScreenWebApp",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "VideoComponent",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Video",
+            "TypeName": "ScreenWebApp.Models.VideoModel",
+            "IsEnum": false,
+            "IndexerNamePrefix": null,
+            "IndexerTypeName": null,
+            "Documentation": null,
+            "Diagnostics": [],
+            "Metadata": {
+              "Common.PropertyName": "Video"
+            },
+            "BoundAttributeParameters": []
+          }
+        ],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ScreenWebApp.Components.VideoComponent"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "ScreenWebApp.Components.VideoComponent",
+        "AssemblyName": "ScreenWebApp",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ScreenWebApp.Components.VideoComponent",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Video",
+            "TypeName": "ScreenWebApp.Models.VideoModel",
+            "IsEnum": false,
+            "IndexerNamePrefix": null,
+            "IndexerTypeName": null,
+            "Documentation": null,
+            "Diagnostics": [],
+            "Metadata": {
+              "Common.PropertyName": "Video"
+            },
+            "BoundAttributeParameters": []
+          }
+        ],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ScreenWebApp.Components.VideoComponent",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "Kind": "Components.Component",
         "Name": "ScreenWebApp.Components.SliderComponent",
         "AssemblyName": "ScreenWebApp",
         "Documentation": null,
@@ -473,134 +601,6 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "ScreenWebApp.Components.SliderComponent",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "ScreenWebApp.Components.VideoComponent",
-        "AssemblyName": "ScreenWebApp",
-        "Documentation": null,
-        "TagOutputHint": null,
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "VideoComponent",
-            "ParentTag": null,
-            "TagStructure": 0,
-            "Attributes": [],
-            "Diagnostics": []
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Video",
-            "TypeName": "ScreenWebApp.Models.VideoModel",
-            "IsEnum": false,
-            "IndexerNamePrefix": null,
-            "IndexerTypeName": null,
-            "Documentation": null,
-            "Diagnostics": [],
-            "Metadata": {
-              "Common.PropertyName": "Video"
-            },
-            "BoundAttributeParameters": []
-          }
-        ],
-        "AllowedChildTags": [],
-        "Diagnostics": [],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ScreenWebApp.Components.VideoComponent"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "ScreenWebApp.Components.VideoComponent",
-        "AssemblyName": "ScreenWebApp",
-        "Documentation": null,
-        "TagOutputHint": null,
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ScreenWebApp.Components.VideoComponent",
-            "ParentTag": null,
-            "TagStructure": 0,
-            "Attributes": [],
-            "Diagnostics": []
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Video",
-            "TypeName": "ScreenWebApp.Models.VideoModel",
-            "IsEnum": false,
-            "IndexerNamePrefix": null,
-            "IndexerTypeName": null,
-            "Documentation": null,
-            "Diagnostics": [],
-            "Metadata": {
-              "Common.PropertyName": "Video"
-            },
-            "BoundAttributeParameters": []
-          }
-        ],
-        "AllowedChildTags": [],
-        "Diagnostics": [],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ScreenWebApp.Components.VideoComponent",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "ScreenWebApp.App",
-        "AssemblyName": "ScreenWebApp",
-        "Documentation": null,
-        "TagOutputHint": null,
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "App",
-            "ParentTag": null,
-            "TagStructure": 0,
-            "Attributes": [],
-            "Diagnostics": []
-          }
-        ],
-        "BoundAttributes": [],
-        "AllowedChildTags": [],
-        "Diagnostics": [],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ScreenWebApp.App"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "ScreenWebApp.App",
-        "AssemblyName": "ScreenWebApp",
-        "Documentation": null,
-        "TagOutputHint": null,
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ScreenWebApp.App",
-            "ParentTag": null,
-            "TagStructure": 0,
-            "Attributes": [],
-            "Diagnostics": []
-          }
-        ],
-        "BoundAttributes": [],
-        "AllowedChildTags": [],
-        "Diagnostics": [],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ScreenWebApp.App",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -21114,54 +21114,54 @@
   "RootNamespace": "ScreenWebApp",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\ahmed.magdi\\source\\repos\\SignagePlatform\\ScreenWebApp\\Pages\\Index.razor",
+      "FilePath": "/Users/magdi/Documents/repo/SignagePlatformApp/ScreenWebApp/Pages/Index.razor",
       "TargetPath": "Pages\\Index.razor",
       "FileKind": "component"
     },
     {
-      "FilePath": "c:\\Users\\ahmed.magdi\\source\\repos\\SignagePlatform\\ScreenWebApp\\Shared\\NavMenu.razor",
-      "TargetPath": "Shared\\NavMenu.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "c:\\Users\\ahmed.magdi\\source\\repos\\SignagePlatform\\ScreenWebApp\\Shared\\MainLayout.razor",
+      "FilePath": "/Users/magdi/Documents/repo/SignagePlatformApp/ScreenWebApp/Shared/MainLayout.razor",
       "TargetPath": "Shared\\MainLayout.razor",
       "FileKind": "component"
     },
     {
-      "FilePath": "c:\\Users\\ahmed.magdi\\source\\repos\\SignagePlatform\\ScreenWebApp\\Pages\\SlideIndex.razor",
-      "TargetPath": "Pages\\SlideIndex.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "c:\\Users\\ahmed.magdi\\source\\repos\\SignagePlatform\\ScreenWebApp\\Components\\SliderComponent.razor",
-      "TargetPath": "Components\\SliderComponent.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "c:\\Users\\ahmed.magdi\\source\\repos\\SignagePlatform\\ScreenWebApp\\App.razor",
-      "TargetPath": "App.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "c:\\Users\\ahmed.magdi\\source\\repos\\SignagePlatform\\ScreenWebApp\\Pages\\Error.razor",
+      "FilePath": "/Users/magdi/Documents/repo/SignagePlatformApp/ScreenWebApp/Pages/Error.razor",
       "TargetPath": "Pages\\Error.razor",
       "FileKind": "component"
     },
     {
-      "FilePath": "c:\\Users\\ahmed.magdi\\source\\repos\\SignagePlatform\\ScreenWebApp\\Components\\VideoComponent.razor",
+      "FilePath": "/Users/magdi/Documents/repo/SignagePlatformApp/ScreenWebApp/App.razor",
+      "TargetPath": "App.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/Users/magdi/Documents/repo/SignagePlatformApp/ScreenWebApp/Components/VideoComponent.razor",
       "TargetPath": "Components\\VideoComponent.razor",
       "FileKind": "component"
     },
     {
-      "FilePath": "c:\\Users\\ahmed.magdi\\source\\repos\\SignagePlatform\\ScreenWebApp\\Pages\\_Host.cshtml",
+      "FilePath": "/Users/magdi/Documents/repo/SignagePlatformApp/ScreenWebApp/_Imports.razor",
+      "TargetPath": "_Imports.razor",
+      "FileKind": "componentImport"
+    },
+    {
+      "FilePath": "/Users/magdi/Documents/repo/SignagePlatformApp/ScreenWebApp/Pages/SlideIndex.razor",
+      "TargetPath": "Pages\\SlideIndex.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/Users/magdi/Documents/repo/SignagePlatformApp/ScreenWebApp/Shared/NavMenu.razor",
+      "TargetPath": "Shared\\NavMenu.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/Users/magdi/Documents/repo/SignagePlatformApp/ScreenWebApp/Pages/_Host.cshtml",
       "TargetPath": "Pages\\_Host.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\ahmed.magdi\\source\\repos\\SignagePlatform\\ScreenWebApp\\_Imports.razor",
-      "TargetPath": "_Imports.razor",
-      "FileKind": "componentImport"
+      "FilePath": "/Users/magdi/Documents/repo/SignagePlatformApp/ScreenWebApp/Components/SliderComponent.razor",
+      "TargetPath": "Components\\SliderComponent.razor",
+      "FileKind": "component"
     }
   ],
   "SerializationFormat": "0.2"
