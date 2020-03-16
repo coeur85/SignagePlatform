@@ -4,20 +4,18 @@
 
 
 
- <div class="carousel slide  " data-ride="carousel" data-pause="false" id="slide_@id" >
+ <div class="carousel slide  carousel-fade" data-ride="carousel" data-pause="false" id="slide_@id" >
     <div class="carousel-inner"> 
 
-        @{
-            var picList = Pictures.OrderBy(x=> Guid.NewGuid()).ToList();
-        }
-        @for (int i = 0; i < picList.Count; i++)
+       
+        @for (int i = 0; i < Pictures.Count; i++)
         {
             
             string active = ( i == ActiveSlide) ? "active":  "";
             
                 <div class="carousel-item @active" >
                   
-                        <img src="@picList[i].Base64" class="img-thumbnail bgomlaAddImg"  />
+                        <img src="@Pictures[i].Base64" class="img-thumbnail bgomlaAddImg1080"  />
                 </div>    
             
         }     

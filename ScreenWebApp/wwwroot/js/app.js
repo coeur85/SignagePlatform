@@ -103,10 +103,10 @@ function disposeSlider() {
 
 document.body.style.cursor = 'none';
 
-$(document).ready(function () {
-//    jQuery.fn.carousel.Constructor.TRANSITION_DURATION = 2000  // 2 seconds
+// $(document).ready(function () {
+////jQuery.fn.carousel.Constructor.TRANSITION_DURATION = 2000 // 2 seconds
 
-    setTimeout(function () {
-        window.location.reload(1);
-    }, 900000); // 15 min
-});
+//     setTimeout(function () {
+//         window.location.reload(1);
+//     }, 900000); // 15 min
+// });
