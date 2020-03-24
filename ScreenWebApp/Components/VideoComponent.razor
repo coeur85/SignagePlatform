@@ -4,7 +4,7 @@
 
 @if(Video != null && appInstance !=null){
 
-        <video  id="bGomlaVideo"  class="video"
+        <video  id="bGomlaVideo"  class="video" muted="muted" autoplay="true"
         onended="playPics(@Video.VideoID)" onerror="playPics(@Video.VideoID)"  >
             <source src="@Video.VideoFilePath" type="video/mp4" id="vsrc">       
        </video>  
