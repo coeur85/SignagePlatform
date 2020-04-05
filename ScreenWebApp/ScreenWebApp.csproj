@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="wwwroot\img\slider\**" />
+    <Content Remove="wwwroot\img\slider\**" />
+    <EmbeddedResource Remove="wwwroot\img\slider\**" />
+    <None Remove="wwwroot\img\slider\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="SimpleImpersonation" Version="3.0.0" />
+    <PackageReference Include="Microsoft.NETCore.Windows.ApiSets" Version="1.0.1" />
+    <PackageReference Include="screenfull.js" Version="1.2.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\img\Set02\" />
+    <Folder Include="wwwroot\img\Set01\" />
+    <Folder Include="wwwroot\mp4\" />
+  </ItemGroup>
+</Project>

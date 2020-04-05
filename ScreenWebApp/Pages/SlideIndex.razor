@@ -1,0 +1,82 @@
+@using ScreenWebApp.Models;
+@page "/SlideIndex/{setNumberRout}";
+@inject ScreenWebApp.Interfaces.iPicture iPic;
+@using ScreenWebApp.Components;
+@inject ScreenWebApp.Interfaces.iVideo iVid;
+@inject IJSRuntime js;
+
+
+
+<div class="row text-center" id="picturesContaier" >
+        @for (int i = 0; i < 1; i++)
+        {
+            <div class="col-md-12 ">
+                <SliderComponent Pictures="@_pics" ActiveSlide="@i" />             
+            </div>
+        }
+</div>
+
+       @if(Video != null){
+        <div class=" row text-center videoContainer" id="videoContainer"  style="display: none;" >
+                <VideoComponent Video="@Video"  />
+        </div>
+       }
+
+
+    
+    @code{
+    [Parameter]
+    public string setNumberRout {get;set;}
+    public int setNumber {get { return Convert.ToInt32(setNumberRout);}}
+    private  List<PictureModel> _pics = new List<PictureModel>(); 
+    private VideoModel Video {get;set;} = new VideoModel();
+    private object appInstance ;
+    
+        protected override async Task OnInitializedAsync()
+        {
+             appInstance = DotNetObjectReference.Create(this);
+            
+             await LoadData();
+            
+        }
+
+        protected async Task LoadData(){
+            _pics = await iPic.PictureArray((int)setNumber);    
+            Video = await iVid.FirstVideo(setNumber);      
+        }
+
+        [JSInvokable]
+        public async  Task CheckForPicturesUpdate(){   
+            var model = await iPic.CheckForUpdate(setNumber,_pics);
+            if(model.ChangedState){
+                await js.InvokeVoidAsync("disposeSlider");
+                _pics = model.Pictures;
+                this.StateHasChanged();
+                await intSlideshowFromJs();
+            }
+        }    
+        
+         [JSInvokable]
+        public async  Task CheckForVediosUpdate(){   
+            var model = await iVid.NextVideo(setNumber,Video);
+            if(model.ChangedState){
+                Video = model.VideoModel;
+                this.StateHasChanged();
+            }
+        }  
+
+        protected override void OnAfterRender(bool firstRender)
+        {
+            if(firstRender){
+                Task.Run(()=> intSlideshowFromJs());                
+            }
+        }
+
+        protected async Task intSlideshowFromJs(){
+            await  js.InvokeVoidAsync("initAppistance",appInstance);
+            await  js.InvokeVoidAsync("initSlideShow");
+        }
+
+    }
+
+
