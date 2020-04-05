@@ -6,8 +6,6 @@
 ScreenWebApp/wwwroot/img/Set01/*
 ScreenWebApp/wwwroot/img/Set01/*
 ScreenWebApp/wwwroot/mp4/*
-
-
 ScreenWebApp/bin/release/*
 **/bin/Debug/*
-**/bin/release/*
+**/bin/release/
