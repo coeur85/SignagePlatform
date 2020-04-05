@@ -1,6 +1,4 @@
-ScreenWebApp/bin/release/*
-**/bin/Debug/
-**/bin/Release/
+
 
 .DS_Store
 
@@ -9,3 +7,7 @@ ScreenWebApp/wwwroot/img/Set01/*
 ScreenWebApp/wwwroot/img/Set01/*
 ScreenWebApp/wwwroot/mp4/*
 
+
+ScreenWebApp/bin/release/*
+**/bin/Debug/
+**/bin/Release/
