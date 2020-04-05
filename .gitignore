@@ -1,5 +1,4 @@
-ScreenWebApp/bin/realse/
-ScreenWebApp/bin/reals/
+ScreenWebApp/bin/release/
 
 
 .DS_Store
@@ -8,3 +7,4 @@ ScreenWebApp/bin/reals/
 ScreenWebApp/wwwroot/img/Set01/*
 ScreenWebApp/wwwroot/img/Set01/*
 ScreenWebApp/wwwroot/mp4/*
+
