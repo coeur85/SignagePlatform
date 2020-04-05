@@ -1,5 +1,6 @@
 ScreenWebApp/bin/release/*
-
+**/bin/Debug/
+**/bin/Release/
 
 .DS_Store
 
