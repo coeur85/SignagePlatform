@@ -9,5 +9,5 @@ ScreenWebApp/wwwroot/mp4/*
 
 
 ScreenWebApp/bin/release/*
-**/bin/Debug/
-**/bin/Release/
+**/bin/Debug/*
+**/bin/release/*
